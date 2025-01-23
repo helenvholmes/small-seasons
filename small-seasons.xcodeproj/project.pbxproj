@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		79305ED02B0AAD5D000179D8 /* small_seasonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79305ECF2B0AAD5D000179D8 /* small_seasonsTests.swift */; };
 		79305EDA2B0AAD5D000179D8 /* small_seasonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79305ED92B0AAD5D000179D8 /* small_seasonsUITests.swift */; };
 		79305EDC2B0AAD5D000179D8 /* small_seasonsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79305EDB2B0AAD5D000179D8 /* small_seasonsUITestsLaunchTests.swift */; };
+		79305EEC2B0AAF4A000179D8 /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79305EE82B0AAD8B000179D8 /* Seasons.swift */; };
+		79F549642B0C34B40084B6EA /* small-seasons-extensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 79F549562B0C34B30084B6EA /* small-seasons-extensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		79F549682B0C360E0084B6EA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F549282B0C32360084B6EA /* SwiftUI.framework */; };
+		79F549692B0C360E0084B6EA /* SwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79F549282B0C32360084B6EA /* SwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79F5496B2B0C36100084B6EA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F549572B0C34B30084B6EA /* WidgetKit.framework */; };
+		79F5496C2B0C36100084B6EA /* WidgetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79F549572B0C34B30084B6EA /* WidgetKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +37,40 @@
 			remoteGlobalIDString = 79305EB92B0AAD5C000179D8;
 			remoteInfo = "small-seasons";
 		};
+		79F549622B0C34B40084B6EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79305EB22B0AAD5C000179D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F549552B0C34B30084B6EA;
+			remoteInfo = "small-seasons-extensionExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		79F5493C2B0C32370084B6EA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				79F549642B0C34B40084B6EA /* small-seasons-extensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F5496A2B0C360E0084B6EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79F549692B0C360E0084B6EA /* SwiftUI.framework in Embed Frameworks */,
+				79F5496C2B0C36100084B6EA /* WidgetKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		79305EBA2B0AAD5C000179D8 /* small-seasons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "small-seasons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +84,37 @@
 		79305ED52B0AAD5D000179D8 /* small-seasonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "small-seasonsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79305ED92B0AAD5D000179D8 /* small_seasonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = small_seasonsUITests.swift; sourceTree = "<group>"; };
 		79305EDB2B0AAD5D000179D8 /* small_seasonsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = small_seasonsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		79305EE82B0AAD8B000179D8 /* Seasons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seasons.swift; sourceTree = "<group>"; usesTabs = 0; };
+		79F549282B0C32360084B6EA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		79F549562B0C34B30084B6EA /* small-seasons-extensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "small-seasons-extensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F549572B0C34B30084B6EA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		79B0DC192D41D342000E5D3E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Assets 2.xcassets",
+				Info.plist,
+				small_seasons_extension.swift,
+				small_seasons_extensionBundle.swift,
+			);
+			target = 79305EB92B0AAD5C000179D8 /* small-seasons */;
+		};
+		79B0DC1A2D41D342000E5D3E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Assets 2.xcassets",
+				small_seasons_extension.swift,
+				small_seasons_extensionBundle.swift,
+			);
+			target = 79F549552B0C34B30084B6EA /* small-seasons-extensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		79B0DC182D41D338000E5D3E /* small-seasons-extension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (79B0DC192D41D342000E5D3E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 79B0DC1A2D41D342000E5D3E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "small-seasons-extension"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		79305EB72B0AAD5C000179D8 /* Frameworks */ = {
@@ -69,15 +138,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F549532B0C34B30084B6EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F549682B0C360E0084B6EA /* SwiftUI.framework in Frameworks */,
+				79F5496B2B0C36100084B6EA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		79305EB12B0AAD5C000179D8 = {
 			isa = PBXGroup;
 			children = (
+				79B0DC182D41D338000E5D3E /* small-seasons-extension */,
 				79305EBC2B0AAD5C000179D8 /* small-seasons */,
 				79305ECE2B0AAD5D000179D8 /* small-seasonsTests */,
 				79305ED82B0AAD5D000179D8 /* small-seasonsUITests */,
+				79F549252B0C32360084B6EA /* Frameworks */,
 				79305EBB2B0AAD5C000179D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +168,7 @@
 				79305EBA2B0AAD5C000179D8 /* small-seasons.app */,
 				79305ECB2B0AAD5D000179D8 /* small-seasonsTests.xctest */,
 				79305ED52B0AAD5D000179D8 /* small-seasonsUITests.xctest */,
+				79F549562B0C34B30084B6EA /* small-seasons-extensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +181,7 @@
 				79305EC12B0AAD5D000179D8 /* Assets.xcassets */,
 				79305EC32B0AAD5D000179D8 /* small_seasons.entitlements */,
 				79305EC42B0AAD5D000179D8 /* Preview Content */,
+				79305EE82B0AAD8B000179D8 /* Seasons.swift */,
 			);
 			path = "small-seasons";
 			sourceTree = "<group>";
@@ -129,6 +211,15 @@
 			path = "small-seasonsUITests";
 			sourceTree = "<group>";
 		};
+		79F549252B0C32360084B6EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79F549282B0C32360084B6EA /* SwiftUI.framework */,
+				79F549572B0C34B30084B6EA /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,10 +230,15 @@
 				79305EB62B0AAD5C000179D8 /* Sources */,
 				79305EB72B0AAD5C000179D8 /* Frameworks */,
 				79305EB82B0AAD5C000179D8 /* Resources */,
+				79F5493C2B0C32370084B6EA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				79F549632B0C34B40084B6EA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				79B0DC182D41D338000E5D3E /* small-seasons-extension */,
 			);
 			name = "small-seasons";
 			productName = "small-seasons";
@@ -185,6 +281,24 @@
 			productReference = 79305ED52B0AAD5D000179D8 /* small-seasonsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		79F549552B0C34B30084B6EA /* small-seasons-extensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F549652B0C34B40084B6EA /* Build configuration list for PBXNativeTarget "small-seasons-extensionExtension" */;
+			buildPhases = (
+				79F549522B0C34B30084B6EA /* Sources */,
+				79F549532B0C34B30084B6EA /* Frameworks */,
+				79F549542B0C34B30084B6EA /* Resources */,
+				79F5496A2B0C360E0084B6EA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "small-seasons-extensionExtension";
+			productName = "small-seasons-extensionExtension";
+			productReference = 79F549562B0C34B30084B6EA /* small-seasons-extensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,7 +307,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					79305EB92B0AAD5C000179D8 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -205,6 +319,9 @@
 					79305ED42B0AAD5D000179D8 = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 79305EB92B0AAD5C000179D8;
+					};
+					79F549552B0C34B30084B6EA = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
@@ -224,6 +341,7 @@
 				79305EB92B0AAD5C000179D8 /* small-seasons */,
 				79305ECA2B0AAD5D000179D8 /* small-seasonsTests */,
 				79305ED42B0AAD5D000179D8 /* small-seasonsUITests */,
+				79F549552B0C34B30084B6EA /* small-seasons-extensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +370,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F549542B0C34B30084B6EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79305EEC2B0AAF4A000179D8 /* Seasons.swift in Sources */,
 				79305EC02B0AAD5C000179D8 /* ContentView.swift in Sources */,
 				79305EBE2B0AAD5C000179D8 /* small_seasonsApp.swift in Sources */,
 			);
@@ -281,6 +407,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79F549522B0C34B30084B6EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +426,11 @@
 			isa = PBXTargetDependency;
 			target = 79305EB92B0AAD5C000179D8 /* small-seasons */;
 			targetProxy = 79305ED62B0AAD5D000179D8 /* PBXContainerItemProxy */;
+		};
+		79F549632B0C34B40084B6EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F549552B0C34B30084B6EA /* small-seasons-extensionExtension */;
+			targetProxy = 79F549622B0C34B40084B6EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -331,6 +469,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -392,6 +531,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -419,6 +559,7 @@
 				CODE_SIGN_ENTITLEMENTS = "small-seasons/small_seasons.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"small-seasons/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -440,7 +581,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "helen.v.holmes-gmail.com.small-seasons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,6 +597,7 @@
 				CODE_SIGN_ENTITLEMENTS = "small-seasons/small_seasons.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"small-seasons/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -476,7 +619,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "helen.v.holmes-gmail.com.small-seasons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,10 +630,10 @@
 		79305EE32B0AAD5D000179D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -508,10 +652,10 @@
 		79305EE42B0AAD5D000179D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -530,9 +674,9 @@
 		79305EE62B0AAD5D000179D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -551,9 +695,9 @@
 		79305EE72B0AAD5D000179D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -566,6 +710,71 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "small-seasons";
+			};
+			name = Release;
+		};
+		79F549662B0C34B40084B6EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K434UUX58V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "small-seasons-extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "small-seasons-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "helen.v.holmes-gmail.com.small-seasons.small-seasons-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79F549672B0C34B40084B6EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K434UUX58V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "small-seasons-extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "small-seasons-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "helen.v.holmes-gmail.com.small-seasons.small-seasons-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -604,6 +813,15 @@
 			buildConfigurations = (
 				79305EE62B0AAD5D000179D8 /* Debug */,
 				79305EE72B0AAD5D000179D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F549652B0C34B40084B6EA /* Build configuration list for PBXNativeTarget "small-seasons-extensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F549662B0C34B40084B6EA /* Debug */,
+				79F549672B0C34B40084B6EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,7 +2,7 @@
 //  small_seasonsApp.swift
 //  small-seasons
 //
-//  Created by Sherlock Holmes on 11/19/23.
+//  Created by Helen V. Holmes on 11/19/23.
 //
 
 import SwiftUI
