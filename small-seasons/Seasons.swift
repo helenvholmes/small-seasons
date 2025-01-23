@@ -3,6 +3,7 @@
 //  small-seasons
 //
 //  Created by Helen V. Holmes on 11/19/23.
+//  Inspired by https://smallseasons.guide/.
 //
 
 import Foundation

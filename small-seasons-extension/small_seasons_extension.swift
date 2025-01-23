@@ -7,7 +7,6 @@
 
 import WidgetKit
 import SwiftUI
-import small_seasons
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -21,14 +20,12 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        let entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
-            entries.append(entry)
         }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
@@ -47,7 +44,7 @@ struct small_seasons_extensionEntryView : View {
 
     var body: some View {
         VStack {
-            if let season = small_seasons.getSeason(for: formattedDate) {
+            if let season = getSeason(for: formattedDate) {
                 Text("Current Season: \(season.name)")
                     .padding()
                 Text("\(season.japaneseName)")
@@ -57,9 +54,6 @@ struct small_seasons_extensionEntryView : View {
                     .font(.subheadline)
                     .padding()
             }
-
-            Text("Emoji:")
-            Text(entry.emoji)
         }
     }
     
