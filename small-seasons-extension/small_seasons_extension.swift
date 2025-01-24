@@ -43,16 +43,20 @@ struct small_seasons_extensionEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        LinearGradient(colors: [.purple, .yellow], startPoint: animateGradient ? .topLeading : .bottomLeading, endPoint: animateGradient ? .bottomTrailing : .topTrailing)
-            .ignoresSafeArea()
-            .onAppear {
-                withAnimation(.linear(duration: 10.0).repeatForever(autoreverses: true)) {
-                    animateGradient.toggle()
+        ZStack(alignment: .center) {
+            LinearGradient(colors: [.purple, .yellow], startPoint: animateGradient ? .topLeading : .bottomLeading, endPoint: animateGradient ? .bottomTrailing : .topTrailing)
+                .ignoresSafeArea()
+                .onAppear {
+                    withAnimation(.linear(duration: 10.0).repeatForever(autoreverses: true)) {
+                        animateGradient.toggle()
+                    }
                 }
-            }
-        VStack {
             if let season = getSeason(for: formattedDate) {
-                Text("\(season.japaneseName) · \(season.name)").font(Font.title3.weight(.black))
+                VStack(alignment: .center) {
+                    Text("\(season.japaneseName) · \(season.name)").font(Font.caption.weight(.black)).padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 10))
+                    Text((season.meaning)).font(Font.caption.weight(.light)).multilineTextAlignment(.center).italic().padding(EdgeInsets(top: 0, leading: 10, bottom: 20, trailing: 10))
+                }.background(.white)
+
             } else {
                 Text("Invalid date format or season not found.")
                     .foregroundColor(.red)
@@ -83,8 +87,9 @@ struct small_seasons_extension: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .contentMarginsDisabled() // Removes content margins
+        .configurationDisplayName("Small Seasons")
+        .description("Current sekki.")
     }
 }
 
