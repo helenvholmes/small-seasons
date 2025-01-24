@@ -10,11 +10,11 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
+        SimpleEntry(date: Date())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
+        let entry = SimpleEntry(date: Date())
         completion(entry)
         
     }
@@ -35,19 +35,24 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let emoji: String
 }
 
 struct small_seasons_extensionEntryView : View {
     @State private var currentDate = Date()
+    @State private var animateGradient = false
     var entry: Provider.Entry
 
     var body: some View {
+        LinearGradient(colors: [.purple, .yellow], startPoint: animateGradient ? .topLeading : .bottomLeading, endPoint: animateGradient ? .bottomTrailing : .topTrailing)
+            .ignoresSafeArea()
+            .onAppear {
+                withAnimation(.linear(duration: 10.0).repeatForever(autoreverses: true)) {
+                    animateGradient.toggle()
+                }
+            }
         VStack {
             if let season = getSeason(for: formattedDate) {
-                Text("Current Season: \(season.name)")
-                    .padding()
-                Text("\(season.japaneseName)")
+                Text("\(season.japaneseName) · \(season.name)").font(Font.title3.weight(.black))
             } else {
                 Text("Invalid date format or season not found.")
                     .foregroundColor(.red)
@@ -86,6 +91,5 @@ struct small_seasons_extension: Widget {
 #Preview(as: .systemSmall) {
     small_seasons_extension()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    SimpleEntry(date: .now)
 }
